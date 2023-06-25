@@ -24,7 +24,8 @@ import { EmpresaComponent } from './dashboard/empresa/empresa.component';
     RouterModule.forRoot([
       {path:'dashboard', component:DashboardComponent,
         children:[
-          {path:'usuario',component:UsuarioComponent}
+          {path:'usuario',component:UsuarioComponent},
+          {path:'empresa',component:EmpresaComponent}
         ]
     
       },

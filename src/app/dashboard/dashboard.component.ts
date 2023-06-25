@@ -14,4 +14,8 @@ export class DashboardComponent {
   irPaginaUsuario(): void{
     this.router.navigate(['usuario'], {relativeTo: this.route});
   }
+
+  irPaginaEmpresa():void{
+    this.router.navigate(['empresa'], {relativeTo: this.route})
+  }
 }
