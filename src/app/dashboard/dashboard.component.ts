@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  constructor(private router:Router,private route:ActivatedRoute){}
+
+
+  irPaginaUsuario(): void{
+    this.router.navigate(['usuario'], {relativeTo: this.route});
+  }
 }
