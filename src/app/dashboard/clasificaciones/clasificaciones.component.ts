@@ -9,7 +9,7 @@ export class ClasificacionesComponent {
   calificacion1: number;
   calificacion2: number;
   calificacion3: number;
-  promedio: number | null = null;
+  promedio: string | null = null;
 
 
 
@@ -24,7 +24,8 @@ export class ClasificacionesComponent {
   calcularPromedio() {
     if (this.calificacion1 && this.calificacion2 && this.calificacion3) {
       const suma = this.calificacion1 + this.calificacion2 + this.calificacion3;
-      this.promedio = suma / 3;
+      const promedioNumerico = suma / 3;
+      this.promedio = promedioNumerico.toFixed(2);
     } else {
       this.promedio = null;
     }
