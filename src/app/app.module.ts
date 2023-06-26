@@ -8,24 +8,30 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { UsuarioComponent } from './dashboard/usuario/usuario.component';
 import { EmpresaComponent } from './dashboard/empresa/empresa.component';
+import { ClasificacionesComponent } from './dashboard/clasificaciones/clasificaciones.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     UsuarioComponent,
-    EmpresaComponent
+    EmpresaComponent,
+    ClasificacionesComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {path:'dashboard', component:DashboardComponent,
         children:[
           {path:'usuario',component:UsuarioComponent},
-          {path:'empresa',component:EmpresaComponent}
+          {path:'empresa',component:EmpresaComponent},
+          {path:'clasificaciones',component:ClasificacionesComponent}
+
         ]
     
       },

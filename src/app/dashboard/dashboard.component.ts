@@ -18,4 +18,8 @@ export class DashboardComponent {
   irPaginaEmpresa():void{
     this.router.navigate(['empresa'], {relativeTo: this.route})
   }
+
+  irPaginaClasificaciones(): void{
+    this.router.navigate(['clasificaciones'], {relativeTo: this.route});
+  }
 }

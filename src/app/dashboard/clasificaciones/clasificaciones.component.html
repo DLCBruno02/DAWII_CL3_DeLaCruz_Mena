@@ -1,0 +1,16 @@
+<h2>Ingrese las calificaciones</h2>
+<div>
+  <label for="calificacion1">Calificación 1:</label>
+  <input matInput type="number" id="calificacion1" [(ngModel)]="calificacion1">
+</div>
+<div>
+  <label for="calificacion2">Calificación 2:</label>
+  <input matInput type="number" id="calificacion2" [(ngModel)]="calificacion2">
+</div>
+<div>
+  <label for="calificacion3">Calificación 3:</label>
+  <input matInput type="number" id="calificacion3" [(ngModel)]="calificacion3">
+</div>
+<button mat-button color="primary" (click)="calcularPromedio()">Calcular Promedio</button>
+<p *ngIf="promedio !== null">El promedio es: {{ promedio }}</p>
+
